@@ -32,5 +32,6 @@ RUN cd $TASKDDATA && \
     taskd config --force server taskd:53589
 
 RUN taskdctl start
+ENTRYPOINT taskd server
 
 EXPOSE 53589

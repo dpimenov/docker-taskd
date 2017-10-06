@@ -2,6 +2,9 @@ version: "3.3"
 
 services:
   taskd:
+    hostname: taskd
     build:
       context: .
       dockerfile: Dockerfile
+    ports:
+        - "0.0.0.0:53589:53589"

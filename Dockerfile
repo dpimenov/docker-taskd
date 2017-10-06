@@ -29,7 +29,7 @@ RUN taskd config --force client.cert $TASKDDATA/client.cert.pem && \
 RUN cd $TASKDDATA && \
     taskd config --force log $PWD/taskd.log && \
     taskd config --force pid.file $PWD/taskd.pid && \
-    taskd config --force server localhost:53589
+    taskd config --force server taskd:53589
 
 RUN taskdctl start
 
